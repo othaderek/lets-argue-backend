@@ -8,6 +8,12 @@ Rails.application.routes.draw do
           post :downvote
         end
       end
+      resources :comments do
+        member do
+          post :upvote
+          post :downvote
+        end
+      end
       resources :fallacies
       resources :fouls
       resources :votes
@@ -19,5 +25,3 @@ Rails.application.routes.draw do
     end
   end
 end
-  # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-# end

@@ -2,9 +2,9 @@ class CreateVotes < ActiveRecord::Migration[5.2]
   def change
     create_table :votes do |t|
       t.string :type
-      t.integer :user_id
+      t.references :user, foreign_key: true
+      t.integer :voteable_id, foreign_key: true
       t.string :voteable_type
-      t.integer :voteable_id
 
       t.timestamps
     end
