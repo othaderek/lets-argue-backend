@@ -1,2 +1,0 @@
-class FoulsController < ApplicationController
-end

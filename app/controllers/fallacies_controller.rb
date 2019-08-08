@@ -1,2 +1,0 @@
-class FallaciesController < ApplicationController
-end

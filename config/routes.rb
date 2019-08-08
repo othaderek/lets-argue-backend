@@ -1,16 +1,23 @@
 Rails.application.routes.draw do
-  resources :fallacies
-  resources :fouls
-  resources :votes
-  resources :comment_votes
-  resources :post_votes
-  resources :comment_fouls
-  resources :post_fouls
-  resources :subscriptions
-  resources :follows
-  resources :comments
-  resources :posts
-  resources :channels
-  resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api do
+    namespace :v1 do
+      # get "/home", to: "posts#show"
+      resources :posts do
+        member do
+          post :upvote
+          post :downvote
+        end
+      end
+      resources :fallacies
+      resources :fouls
+      resources :votes
+      resources :subscriptions
+      resources :follows
+      resources :comments
+      resources :channels
+      resources :users
+    end
+  end
 end
+  # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# end
