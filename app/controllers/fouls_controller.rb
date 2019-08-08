@@ -1,0 +1,2 @@
+class FoulsController < ApplicationController
+end
