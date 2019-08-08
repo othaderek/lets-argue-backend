@@ -1,0 +1,2 @@
+class FallaciesController < ApplicationController
+end

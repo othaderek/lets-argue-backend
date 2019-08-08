@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fallacies
   resources :fouls
   resources :votes
   resources :comment_votes

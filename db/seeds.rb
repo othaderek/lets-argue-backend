@@ -24,8 +24,35 @@ first_comment = Comment.create(commentable_type: "Post", commentable_id: 1, user
 second_comment = Comment.create(commentable_type: "Comment", commentable_id: 1, user_id: 1, body: "Thanks a lot!!!")
 third_comment = Comment.create(commentable_type: "Post", commentable_id: 1, user_id: 3, body: "Screw you buck-o!")
 
-# t.string :type
+
+
+# Fallacies
+# Ad Hominem: This occurs when an author attacks his opponent instead of his opponent’s argument.
+# Example: Trina thinks guns should be outlawed but Trina doesn’t go to church, so we shouldn’t listen to her
+# Ad Populum: Ad Populum attempts to prove an argument as correct simply because many people believe it to be so.
+# Example: 80% of people are for the death penalty, therefore, the death penalty is moral.
+# Appeal to Authority:  In this fallacious argument, the author claims his argument is right because someone famous or powerful supports it.
+# Example: We should change the drinking age because Einstein believed that 18 was the proper drinking age
+# Begging the Question: This happens when the author’s premise and conclusion say the same thing.
+# Example: Fashion magazines don’t hurt women’s self esteem because women’s confidence is intact after reading the magazine.
+# False Dichotomy: This fallacy rests on the assumption that there are only two possible solutions, so disproving one solution means that other solution should be utilized. It ignores other alternative solutions.Example: The teacher gives too many A’s and therefore must be fired because grade inflation is unfair to other students
+# Hasty Generalization: Hasty Generalization occurs when the proponent uses too small of a sample size to support a sweeping generalization.Example: Sally couldn’t find any cute clothes at the boutique and neither could Maura, so the boutique doesn’t have any cute clothes.
+# Post Hoc/ False Cause: This fallacy assumes that correlation equals causation or, in other words, if one event predicts another event it must have also caused the event.Example: The football team gets better grades than the baseball team, therefore playing football makes you smarter than playing baseball.
+# Missing the Point: In Missing the Point, the premise of the argument supports a specific conclusion but not the one the author draws. Example: Antidepressants are overly prescribed which is dangerous, so they should clearly be made illegal.
+# Spotlight Fallacy: This occurs when the author assumes that the cases that receive the most publicity are the most common cases.Example: 90% of news reports talk about negative events. Therefore, it follows that 90% of events that occur in the real world are negative.
+# Straw Man: In this fallacy, the author puts forth one of his opponent’s weaker, less central arguments forward and destroys it, while acting like this argument is the crux of the issue.Example: My opponent wants to increase teachers’ pay but studies have shown that professors with tenure don’t work as hard at their job to improve themselves.
+#
+# t.string :name
+# t.string :description
+
+ad_hominem = Fallacy.create(name: "Ad Hominem", description: "This occurs when an author attacks his opponent instead of his opponent’s argument.")
+
+
+
+# FOULS
+# t.integer :fallacy_id
 # t.string :foulable_type
 # t.integer :foulable_id
 # t.integer :user_id
-Foul.create(fallacy: "Strawman Fallacy", foulable_type: "Comment", foulable_id: 3, user_id: 1)
+
+Foul.create(fallacy: ad_hominem, foulable_type: "Comment", foulable_id: 3, user: otha)
