@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      # get "/home", to: "posts#show"
+      post "/login", to: "auth#create"
+      post "/signup", to: "users#create"
+      get "/profile", to: "users#profile"
       resources :posts do
         member do
           post :upvote

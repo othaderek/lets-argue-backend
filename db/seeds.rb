@@ -15,6 +15,21 @@ politics = Channel.create(name: "Politics", description: "This is where we talk 
 film = Channel.create(name: "Film", description: "This is where we talk film")
 
 first_post = Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
+Post.create(title: "I AM RIGHT", body: "This is my opinion", user_id: otha.id, channel_id: politics.id )
 
 # t.string :commentable_type
 # t.integer :commentable_id
