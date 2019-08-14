@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :down_voted_posts, through: :down_votes, source: :post
   has_many :up_voted_comments, through: :up_votes, source: :comment
   has_many :up_voted_posts, through: :up_votes, source: :post
+
 end

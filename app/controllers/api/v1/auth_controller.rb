@@ -2,6 +2,7 @@ class Api::V1::AuthController < ApplicationController
   skip_before_action :authorized, only: :create
 
   def create
+    # debugger
      user = User.find_by(username: params[:username])
      is_authenticated = nil
      is_authenticated = user.authenticate(params[:password]) if user

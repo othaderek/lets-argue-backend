@@ -1,4 +1,4 @@
-class Api::V1::UsersController < ApplicationController
+class Api::V1::UsersController <  Api::V1::AuthController
   skip_before_action :authorized, only: :create
 
   def show
@@ -16,10 +16,10 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
+    @user = User.create(user_params)
 
-    if user.valid?
-
+    if @user.valid?
+      render json: @user
     else
       render json: {errors: user.errors.full_messages}, status: unprocessable_entity
     end
