@@ -26,13 +26,13 @@ class Api::V1::UsersController <  Api::V1::AuthController
   end
 
   def update
-    
+
   end
 
   private
 
   def user_params
-    params.permit(:username, :password)
+    params.permit(:username, :password, :first_name, :last_name, :city, :state, :zipcode)
   end
 
 end
